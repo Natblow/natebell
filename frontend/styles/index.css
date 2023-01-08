@@ -4,4 +4,31 @@
 @import "breakpoints.css";
 
 
+/* @tailwind base; */
+@tailwind components;
+@tailwind utilities;
 
+
+/* @layer base {
+    h1 {
+      @apply text-3xl;
+    }
+    h2 {
+      @apply text-2xl;
+    }
+    h3 {
+      @apply text-xl;
+    }
+    h4 {
+      @apply text-lg;
+    }
+    
+  } */
+
+
+/* a {
+    color: var(--action-color);
+    text-decoration: underline;
+    text-decoration-color: #ffb088;
+  } */
+  
