@@ -1,0 +1,10 @@
+/postcss.config.js linguist-vendored=true
+/tailwind.config.js linguist-vendored=true
+config/esbuild.defaults.js linguist-vendored=true
+/esbuild.config.js linguist-vendored=true
+frontend/styles/content.css linguist-vendored=true
+frontend/styles/breakpoints.css linguist-vendored=true
+frontend/styles/index.css linguist-vendored=true
+frontend/styles/shoelaced.css linguist-vendored=true
+frontend/styles/global.css linguist-vendored=true
+frontend/styles/syntax-highlighting.css linguist-vendored=true
