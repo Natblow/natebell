@@ -4,9 +4,11 @@
 @import "breakpoints.css";
 
 
-/* @tailwind base; */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
+@tailwind variants;
 
 
 /* @layer base {
