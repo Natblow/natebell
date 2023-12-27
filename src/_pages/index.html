@@ -16,7 +16,7 @@ locales:
                 <nav class="flex items-center justify-between mb-40">
                     <img src="{{ 'images/navbar-logo.png' | relative_url }}" alt="Logo">
 
-                    <button class="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500">{% t buttons.get_my_cv %}</p></button>
+                    <button class="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md hover:bg-gray-700 hover:text-white transition ease-linear duration-500"><a href="{{ './files/001_Nathan_Engineer_Resume.pdf' | relative_url }}" download>{% t buttons.get_my_cv %}</a></button>
                 </nav>
 
                 <div class="text-center">
@@ -30,7 +30,7 @@ locales:
 
                     <p class="font-normal text-gray-600 text-md md:text-xl mb-16">{% t welcome.introduction %}</p>
 
-                    <a href="#" class="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500">{% t buttons.hire_me %}</a>
+                    <a href="mailto:{{ metadata.email }}" class="px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold bg-gray-700 text-gray-50 text-sm rounded-md hover:bg-gray-50 hover:text-gray-700 transition ease-linear duration-500">{% t buttons.hire_me %}</a>
                 </div>
 
             </div>
