@@ -1,6 +1,6 @@
 <nav>
   <ul>
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-    <li><a href="{{ '/posts' | relative_url }}">Blog</a></li>
+    <li><a href="{{ '/' | in_locale | relative_url }}">{% t navbar.home %}</a></li>
+    <li><a href="{{ '/posts' | in_locale | relative_url }}">{% t navbar.blog %}</a></li>
   </ul>
 </nav>

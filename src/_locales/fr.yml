@@ -1,0 +1,78 @@
+fr:
+  site:
+    title: "Nathan Bellow"
+    tagline: "Site personnel de Nathan Bellow"
+    description: >-
+      Site personnel de Nathan Bellow fait avec le framework Bridgetown.
+  navbar:
+    home: Accueil
+    blog: Blog
+  buttons:
+    get_my_cv: Obtenir mon CV
+    hire_me: Embauchez-moi
+  welcome:
+    software_engineer: Ingénieur Logiciel
+    introduction: >-
+      J'ai une passion pour la technologie. J'aime créer des outils qui facilitent la vie des gens.
+    leader: Leader
+    leader_description: >-
+      En tant qu'individu ayant une expérience diversifiée couvrant la programmation, le service à la clientèle,
+      les ventes, le coaching et les initiatives de développement du leadership, je suis un leader naturel dédié
+      à l'amélioration continue, à favoriser la croissance et à inspirer les autres à atteindre leur plein potentiel.
+    avid_learner: Apprenant Passionné
+    avid_learner_description: >-
+      Je suis un apprenant à vie qui cherche toujours à élargir mes connaissances et mes compétences.
+      Je possède une curiosité naturelle et un désir d'apprendre de nouvelles choses, cherchant
+      constamment à m'améliorer, incarnant une forte mentalité de croissance.
+    contributor: Contributeur
+    contributor_description: >-
+      J'ajoute activement et positivement de la valeur à diverses entreprises, projets ou initiatives.
+      Mon implication va au-delà de la simple participation; j'apporte mes compétences, 
+      mes connaissances et mon enthousiasme à la table,
+      apportant des contributions significatives qui contribuent 
+      au succès et à la progression de nos objectifs globaux.
+    portfolio: Portfolio
+    portfolio_description: >-
+      J'ai apporté ici mes projets personnels.
+    projects:
+      rock_paper_scissors: Jeu Pierre Papier Ciseaux CLI (Ruby)
+      rock_paper_scissors_description: >-
+        Conçu et implémenté un jeu en ligne de commande <br>
+        doté d'une interface intuitive et de niveaux de difficulté<br> réglables
+        pour une meilleure participation des utilisateurs.
+      events_app: Plateforme de gestion d'événements moderne (Ruby On Rails)
+      events_app_description: >-
+        Développé une plateforme de gestion d'événements de pointe<br>
+        distingué par son design contemporain et son ensemble de <br>fonctionnalités robuste,
+        facilitant la gestion complète des événements<br> et des participants.
+      survey_app: Sondage intuitif avec analyse (Ruby)
+      survey_app_description: >-
+        Conçu un outil simple de création et de gestion de sondages<br> mis en évidence par
+        son interface intuitive et conviviale et ses capacités de reporting avancées
+        pour une analyse de données éclairante.
+    education: Éducation
+    education_intro: >-
+      Voici un résumé des endroits où j'ai étudié.
+    see_the_place: Voir l'endroit ici
+    highly_passionate: Très Passionné par la Technologie
+    highly_passionate_description: >-
+      Depuis 2009, j'utilise principalement HTML & CSS pour les projets web<br>
+      et après avoir obtenu mon diplôme, j'ai trouvé l'amour avec Ruby On Rails pour les projets backend.<br>
+      J'aime aussi VueJs pour le frontend et<br>
+      je viens de trouver mon nouvel amour pour Rust pour tout projet de programmation de bas niveau.
+    experience: Expérience
+    experience_intro: >-
+      Voici un résumé des endroits où j'ai travaillé en tant qu'ingénieur logiciel.
+    company: Entreprise
+    year: Année
+    remote: À distance
+    founder: Fondateur
+    testimonial: Témoignage
+    first_testimonial: >-
+      Nathan est un développeur très talentueux et un excellent collègue. Il est très motivé et
+      a une grande capacité à apprendre de nouvelles technologies. Il est également très
+      bon pour travailler en équipe et pour communiquer avec les autres. Je recommande fortement Nathan.
+    first_testimonial_author: >-
+      - Développeur et Leader d'Ingénierie, auparavant Directeur d'Ingénierie à Shopify
+  footer:
+    contact: Contactez-moi à

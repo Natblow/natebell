@@ -1,0 +1,82 @@
+en:
+  site:
+    title: "Bridgetown"
+    tagline: "A Webpack-aware, Ruby-powered static site generator for the modern Jamstack era"
+    description: >-
+      Personal website of Nathan Bellow made with the Bridgetown framework.
+  navbar:
+    home: Home
+    blog: Blog
+  buttons: 
+    get_my_cv: Get my CV
+    hire_me: Hire me
+  welcome:
+    software_engineer: Software Engineer
+    introduction: >-
+      I have a passion for technology. I enjoy creating tools that make life easier for people.
+    leader: Leader
+    leader_description: >-
+      As an individual with a diverse background spanning programming, customer service, 
+      sales, coaching, and leadership development initiatives, I am a natural leader dedicated 
+      to continuous improvement, fostering growth, and inspiring others to reach their full potential.
+    avid_learner: Avid Learner
+    avid_learner_description: >-
+      I am a lifelong learner who is always looking to expand my knowledge and skillset. 
+      I possess a natural curiosity and eagerness for learning new things, consistently 
+      seeking self-improvement, embodying a strong growth mindset. 
+    contributor: Contributor
+    contributor_description: >-
+      I actively and positively add value to various endeavors, projects, or initiatives.
+      My involvement goes beyond mere participation; I bring my skills, knowledge, and 
+      enthusiasm to the table, making meaningful contributions that contribute to the 
+      success and progress of our overall goals.
+    portfolio: Portfolio
+    portfolio_description: >-
+      I have brought here my personal projects.
+    projects:
+      rock_paper_scissors: Rock Paper Scissors CLI Game (Ruby)
+      rock_paper_scissors_description: >-
+        Designed and implemented a command-line game <br>
+        featuring an intuitive interface and adjustable
+        difficulty levels for enhanced user engagement.
+      events_app: Modern Events Management Platform (Ruby On Rails)
+      events_app_description: >-
+        Developed a cutting-edge events management platform
+        distinguished by its contemporary design and robust feature set,
+        facilitating comprehensive event and attendee management.
+      survey_app: Intuitive Survey with Analytics (Ruby)
+      survey_app_description: >-
+        Crafted a simple survey creation and management tool highlighted by
+        its intuitive, user-friendly interface and advanced reporting 
+        capabilities for insightful data analysis.
+    education: Education
+    education_intro: >-
+      Below is a summary of the places I studied.
+    see_the_place: See the place here
+    highly_passionate: Highly Passionate about Technology
+    highly_passionate_description: >-
+      Since 2009 I've been mainly using HTML & CSS for web projects<br>
+      and after graduating I've found love with Ruby On Rails for backend projects.<br>
+      I also love VueJs for the frontend and
+      I just got my new found love for Rust for any lower-level programming projects.
+    experience: Experience
+    experience_intro: >-
+      Below is a summary of the places I worked as a software engineer.
+    company: Company
+    year: Year
+    remote: Remote
+    founder: Founder
+    testimonial: Testimonial
+    first_testimonial: >-
+      Nathan is a very curious and eager developer, always looking for ways to improve himself.
+      He isn't afraid to look for feedback and suggestions to improve himself or the code
+      he is writing, he never takes it personally and applies it to whatever he is working on.
+      I was especially impressed with the amount of initiative he has taken going out of his way
+      to find mentorship, and opportunities to improve himself, on his own. 
+      If you're looking for a developer that is self-motivated, consistent, 
+      has a strong "growth mindset", and ready to grow alongside you, Nathan 
+      is an excellent choice!
+    first_testimonial_author: >-
+      - Developer and Engineering Leader, previously Director of Engineering at Shopify
+  footer:
+    contact: Contact me at

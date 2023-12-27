@@ -1,6 +1,10 @@
 ---
 layout: page
 title: Posts
+locale: multi
+locales:
+  - en
+  - fr	
 ---
 
 <ul>
