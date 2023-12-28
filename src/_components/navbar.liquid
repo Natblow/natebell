@@ -2,5 +2,21 @@
   <ul>
     <li><a href="{{ '/' | in_locale | relative_url }}">{% t navbar.home %}</a></li>
     <li><a href="{{ '/posts' | in_locale | relative_url }}">{% t navbar.blog %}</a></li>
+    
+    {% assign locales = resource.all_locales %} 
+
+    {% for this_locale in locales %}
+      {% assign locale_prefix = this_locale.data.locale %}
+
+      {% if locale_prefix == current_locale %}
+        {% continue %}
+      {% endif %}
+
+      <li style="float: right; margin-left: 35px">
+        <a href="{{ this_locale.relative_url }}">
+            <img src="{{ '/images/' | append: locale_prefix | append: '.png' }}" alt="{{ locale_prefix }}" />
+        </a>
+      </li>
+    {% endfor %}
   </ul>
 </nav>
