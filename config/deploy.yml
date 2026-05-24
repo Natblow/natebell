@@ -1,19 +1,24 @@
-# Kamal 2 deployment config for natebell portfolio
-# Fill in YOUR_SERVER_IP, your-domain.com, and registry credentials before deploying.
-
+<% require "dotenv"; Dotenv.load(".env") if File.exist?(".env") %>
+# Kamal 2 - natebell portfolio
 service: natebell
 image: natblow/natebell
 
 servers:
   web:
-    - YOUR_SERVER_IP
+    - <%= ENV.fetch("KAMAL_SERVER_IP") %>
 
 proxy:
   ssl: true
-  host: your-domain.com
+  hosts:
+    - natebell.ca
+    - www.natebell.ca
+    - nathanbellow.com
+    - www.nathanbellow.com
+  app_port: 80
 
 registry:
-  username: YOUR_REGISTRY_USER
+  server: ghcr.io
+  username: natblow
   password:
     - KAMAL_REGISTRY_PASSWORD
 
