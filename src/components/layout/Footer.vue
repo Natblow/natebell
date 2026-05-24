@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Mail, Phone } from '@lucide/vue'
+import { Mail } from '@lucide/vue'
 import GithubIcon from '../icons/GithubIcon.vue'
 import LinkedinIcon from '../icons/LinkedinIcon.vue'
 import { useI18n } from 'vue-i18n'
@@ -29,13 +29,6 @@ const { t } = useI18n()
           >
             <Mail class="h-4 w-4" />
             {{ siteMetadata.email }}
-          </a>
-          <a
-            :href="`tel:${siteMetadata.phone.replace(/\D/g, '')}`"
-            class="glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm text-zinc-300 transition hover:text-white"
-          >
-            <Phone class="h-4 w-4" />
-            {{ siteMetadata.phone }}
           </a>
           <a
             :href="siteMetadata.github"
