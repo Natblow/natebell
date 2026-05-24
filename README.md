@@ -1,70 +1,96 @@
-# Bridgetown Website README
+# Nathan Bellow - Portfolio
 
-Welcome to your new Bridgetown website! You can update this README file to provide additional context and setup information for yourself or other contributors.
+A bilingual (EN/FR) personal portfolio built with Vue 3, Vite, TypeScript, and Tailwind CSS.
 
-## Table of Contents
+## Stack
 
-- [Prerequisites](#prerequisites)
-- [Install](#install)
-- [Development](#development)
-- [Commands](#commands)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
+- Vue 3 + Composition API
+- Vite + TypeScript
+- Tailwind CSS
+- Vue I18n (English / French)
+- Vue Router (`/` and `/fr`)
+- @vueuse/motion for scroll animations
+- Kamal 2 + nginx for production deployment
 
 ## Prerequisites
 
-- [GCC](https://gcc.gnu.org/install/)
-- [Make](https://www.gnu.org/software/make/)
-- [Ruby](https://www.ruby-lang.org/en/downloads/)
-  - `>= 2.7`
-- [Bridgetown Gem](https://rubygems.org/gems/bridgetown)
-  - `gem install bridgetown -N`
-- [Node](https://nodejs.org)
-  - `>= 12`
-- [Yarn](https://yarnpkg.com)
-
-## Install
-
-```sh
-cd bridgetown-site-folder
-bundle install && yarn install
-```
-> Learn more: [Bridgetown Getting Started Documentation](https://www.bridgetownrb.com/docs/).
+- Node.js 20+
+- npm
 
 ## Development
 
-To start your site in development mode, run `bin/bridgetown start` and navigate to [localhost:4000](https://localhost:4000/)!
-
-Use a [theme](https://github.com/topics/bridgetown-theme) or add some [plugins](https://www.bridgetownrb.com/plugins/) to get started quickly.
-
-### Commands
-
 ```sh
-# running locally
-bin/bridgetown start
-
-# build & deploy to production
-bin/bridgetown deploy
-
-# load the site up within a Ruby console (IRB)
-bin/bridgetown console
+npm install
+npm run dev
 ```
 
-> Learn more: [Bridgetown CLI Documentation](https://www.bridgetownrb.com/docs/command-line-usage)
+Open [http://localhost:5173](http://localhost:5173). Use the language toggle in the navbar to switch between English and French.
 
-## Deployment
+## Build
 
-You can deploy Bridgetown sites on hosts like Render or Vercel as well as traditional web servers by simply building and copying the output folder to your HTML root.
+```sh
+npm run build
+npm run preview
+```
 
-> Read the [Bridgetown Deployment Documentation](https://www.bridgetownrb.com/docs/deployment) for more information.
+## Resume PDF
 
-## Contributing
+Add your CV to `public/resume.pdf`. The site links to it from the hero and navbar.
 
-If repo is on GitHub:
+## Adding Projects Later
 
-1. Fork it
-2. Clone the fork using `git clone` to your local development machine.
-3. Create your feature branch (`git checkout -b my-new-feature`)
-4. Commit your changes (`git commit -am 'Add some feature'`)
-5. Push to the branch (`git push origin my-new-feature`)
-6. Create a new Pull Request
+Edit `src/data/projects.ts` and add matching translation keys in `src/i18n/en.json` and `src/i18n/fr.json`:
+
+```ts
+export const projects: Project[] = [
+  {
+    id: 'my-project',
+    titleKey: 'projects.myProject.title',
+    descriptionKey: 'projects.myProject.description',
+    url: 'https://example.com',
+    repo: 'https://github.com/Natblow/my-project',
+    tags: ['Vue', 'Rails'],
+  },
+]
+```
+
+## Kamal Deployment
+
+
+1. Install Kamal: `gem install kamal`
+2. Copy [`.env.example`](.env.example) to `.env` and set `KAMAL_SERVER_IP` to your Droplet IP
+3. Point all four domains (A records) at that IP
+4. Registry auth for `ghcr.io` — your token must include **`write:packages`**. If you use the GitHub CLI:
+
+```sh
+gh auth refresh -h github.com -s write:packages,read:packages,delete:packages
+gh auth status   # should list write:packages in token scopes
+cp .kamal/secrets.example .kamal/secrets
+```
+
+Or set `KAMAL_REGISTRY_PASSWORD` to a [classic PAT](https://github.com/settings/tokens) with `write:packages` and `read:packages`.
+
+5. First-time setup and deploy:
+
+```sh
+kamal setup
+kamal deploy
+```
+
+Subsequent deploys: `kamal deploy` from this directory only — hoondok is deployed separately from its own repo.
+
+The Dockerfile builds the Vue app and serves it with nginx. No Ruby runtime is required on the server.
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── layout/       # NavBar, Footer
+│   └── sections/     # Hero, Traits, Projects, Education, etc.
+├── composables/      # useLocale
+├── data/             # resume.ts, projects.ts
+├── i18n/             # en.json, fr.json
+├── router/
+└── views/            # HomeView
+```

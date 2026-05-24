@@ -1,0 +1,88 @@
+{
+  "site": {
+    "title": "Nathan Bellow",
+    "description": "Software Engineer based in Montréal - Ruby on Rails, Vue, and full-stack product development."
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "getMyCv": "Download CV",
+    "hireMe": "Let's talk",
+    "viewGithub": "GitHub",
+    "viewLinkedin": "LinkedIn"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "Software Engineer",
+    "introduction": "I build full-stack products that people actually use: from multi-tenant CRMs serving financial advisors to Book reading platforms reaching 2,000+ readers.",
+    "location": "Montréal, QC"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "intro": "Tools and practices I reach for when shipping reliable software.",
+    "groups": {
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "infra": "Data & Infrastructure",
+      "practices": "Practices"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "intro": "Where I've shipped code, led teams, and moved metrics.",
+    "remote": "Remote",
+    "contract": "Contract",
+    "cocooning": {
+      "position": "Software Engineer",
+      "h1": "Building a multi-tenant CRM for financial advisors (Ruby on Rails / MySQL) - client portfolios, insurance, succession planning, and compliance in one system.",
+      "h2": "Designed a compliance-aware case management module linking tasks, documents, and audit trails - increasing weekly active sessions by 12%.",
+      "h3": "Optimized slow queries and added Redis caching on high-traffic endpoints, cutting average API response times by 30%."
+    },
+    "illuxi": {
+      "position": "Software Engineer → Team Lead",
+      "h1": "Full-stack on illuxiLMS, a bilingual LMS serving 200,000+ learners/month for government, school boards, and enterprise clients (TD Bank, City of Longueuil).",
+      "h2": "Shipped platform features, DevOps workflows (CI/CD, AWS), and bug fixes across the LMS and an internal FinTech app.",
+      "h3": "Promoted to Team Lead: sprint planning, PR review pipeline, cross-team coordination - improving sprint velocity by 40%.",
+      "h4": "Led stakeholder syncs for scoping and triage, raising post-release NPS satisfaction scores by 25%."
+    },
+    "agency": {
+      "position": "Software Engineer (Contract)",
+      "h1": "Contributed to an app similar to candidate.fyi hiring-workflow SaaS - API integrations and front-end components in a pair-programming environment."
+    },
+    "bellow": {
+      "position": "Software Engineer",
+      "h1": "Built full-stack apps (Vue 3 + Rails) for a Canadian NGO and a school - donation flow redesign increased online donations by 11%.",
+      "h2": "Delivered WordPress and Vue 3 static sites on compressed timelines for non-technical stakeholders."
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Side projects and open-source work.",
+    "emptyTitle": "Projects coming soon",
+    "emptyDescription": "I'm building new projects to showcase here. Check back soon ; or browse my GitHub in the meantime."
+  },
+  "education": {
+    "title": "Education",
+    "intro": "Formal training in software development.",
+    "seeThePlace": "Visit site",
+    "openclassrooms": {
+      "program": "B.S. Software Development",
+      "location": "France"
+    }
+  },
+  "community": {
+    "title": "Community",
+    "intro": "Conferences and mentorship outside the day job.",
+    "conferences": "RailsConf, RubyConf 2022, and Rails World 2024 attendee",
+    "mentor": "Volunteer mentor at firstrubyfriend.org"
+  },
+  "footer": {
+    "contact": "Get in touch"
+  }
+}

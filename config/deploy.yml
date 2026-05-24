@@ -1,0 +1,21 @@
+# Kamal 2 deployment config for natebell portfolio
+# Fill in YOUR_SERVER_IP, your-domain.com, and registry credentials before deploying.
+
+service: natebell
+image: natblow/natebell
+
+servers:
+  web:
+    - YOUR_SERVER_IP
+
+proxy:
+  ssl: true
+  host: your-domain.com
+
+registry:
+  username: YOUR_REGISTRY_USER
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+builder:
+  arch: amd64

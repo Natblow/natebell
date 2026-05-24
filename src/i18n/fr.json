@@ -1,0 +1,88 @@
+{
+  "site": {
+    "title": "Nathan Bellow",
+    "description": "Ingénieur logiciel basé à Montréal - Ruby on Rails, Vue et développement full-stack."
+  },
+  "nav": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "education": "Formation",
+    "contact": "Contact"
+  },
+  "buttons": {
+    "getMyCv": "Télécharger le CV",
+    "hireMe": "Me contacter",
+    "viewGithub": "GitHub",
+    "viewLinkedin": "LinkedIn"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "title": "Ingénieur Logiciel",
+    "introduction": "Je construis des produits full-stack que les gens utilisent vraiment : des CRM multi-locataires pour conseillers financiers aux plateformes de lecture comptant plus de 2 000 lecteurs.",
+    "location": "Montréal, QC"
+  },
+  "skills": {
+    "title": "Compétences techniques",
+    "intro": "Outils et pratiques que j'utilise pour livrer des logiciels fiables.",
+    "groups": {
+      "languages": "Langages",
+      "frameworks": "Frameworks",
+      "infra": "Données & Infrastructure",
+      "practices": "Pratiques"
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "intro": "Où j'ai livré du code, dirigé des équipes et amélioré des métriques.",
+    "remote": "À distance",
+    "contract": "Contrat",
+    "cocooning": {
+      "position": "Ingénieur Logiciel",
+      "h1": "Développement d'un CRM multi-locataire pour conseillers financiers (Ruby on Rails / MySQL) - portefeuilles clients, assurance, succession et conformité.",
+      "h2": "Conception d'un module de gestion de dossiers conforme, reliant tâches, documents et pistes d'audit - +12 % de sessions actives hebdomadaires.",
+      "h3": "Optimisation de requêtes lentes et cache Redis sur les endpoints à fort trafic - temps de réponse API réduit de 30 %."
+    },
+    "illuxi": {
+      "position": "Ingénieur Logiciel → Chef d'équipe",
+      "h1": "Full-stack sur illuxiLMS, LMS bilingue pour 200 000+ apprenants/mois (gouvernement, commissions scolaires, entreprises comme TD Bank).",
+      "h2": "Livraison de fonctionnalités, workflows DevOps (CI/CD, AWS) et correctifs sur le LMS et une app FinTech interne.",
+      "h3": "Promotion Chef d'équipe : planification de sprints, revue de PR, coordination - vélocité de sprint +40 %.",
+      "h4": "Syncs avec les parties prenantes pour cadrage et triage - satisfaction post-release (NPS) +25 %."
+    },
+    "agency": {
+      "position": "Ingénieur Logiciel (Contrat)",
+      "h1": "Contributions à une application similaire à candidate.fyi (SaaS recrutement) - intégrations API et composants front-end en pair programming."
+    },
+    "bellow": {
+      "position": "Ingénieur Logiciel",
+      "h1": "Apps full-stack (Vue 3 + Rails) pour une ONG et une école - refonte des dons en ligne +11 %.",
+      "h2": "Sites WordPress et Vue 3 livrés rapidement pour des clients non techniques."
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "description": "Projets personnels et open source.",
+    "emptyTitle": "Projets à venir",
+    "emptyDescription": "Je prépare de nouveaux projets à présenter ici. Revenez bientôt ; ou parcourez mon GitHub en attendant."
+  },
+  "education": {
+    "title": "Formation",
+    "intro": "Formation formelle en développement logiciel.",
+    "seeThePlace": "Visiter le site",
+    "openclassrooms": {
+      "program": "Licence - Développement logiciel",
+      "location": "France"
+    }
+  },
+  "community": {
+    "title": "Communauté",
+    "intro": "Conférences et mentorat en dehors du travail.",
+    "conferences": "Participant RailsConf, RubyConf 2022 et Rails World 2024",
+    "mentor": "Mentor bénévole chez firstrubyfriend.org"
+  },
+  "footer": {
+    "contact": "Me contacter"
+  }
+}

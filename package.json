@@ -1,24 +1,28 @@
 {
   "name": "natebell",
-  "version": "1.0.0",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "esbuild": "node esbuild.config.js --minify",
-    "esbuild-dev": "node esbuild.config.js --watch"
-  },
-  "devDependencies": {
-    "esbuild": "^0.14.39",
-    "glob": "^8.0.1",
-    "postcss": "^8.4.21",
-    "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-import": "^14.1.0",
-    "postcss-load-config": "^3.1.4",
-    "postcss-preset-env": "^7.4.3"
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@shoelace-style/shoelace": "^2.0.0-beta.88",
-    "autoprefixer": "^10.4.13",
-    "copy-webpack-plugin": "^11.0.0",
-    "tailwindcss": "^3.2.4"
+    "@lucide/vue": "^1.16.0",
+    "@vueuse/motion": "^3.0.3",
+    "vue": "^3.5.34",
+    "vue-i18n": "^11.4.4",
+    "vue-router": "^5.0.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/node": "^24.12.3",
+    "@vitejs/plugin-vue": "^6.0.6",
+    "@vue/tsconfig": "^0.9.1",
+    "tailwindcss": "^4.3.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12",
+    "vue-tsc": "^3.2.8"
   }
 }
