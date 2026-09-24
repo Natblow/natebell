@@ -1,0 +1,22 @@
+# Temporary diagnostic (branch only): probes America Buys public + origin endpoints.
+name: check-americabuys-discovery
+on:
+  push:
+    branches: [claude/check-americabuys-discovery]
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe
+        run: |
+          probe() { echo; echo "===== $1 $2"; curl -sS -m 20 -D - -o body.txt -X "$1" "${@:3}" "$2" | grep -iE '^(HTTP/|location|content-type|www-authenticate|server)' ; echo "--- body:"; head -c 400 body.txt; echo; }
+          probe GET https://nathanbellow.com/americabuys/up
+          probe GET https://nathanbellow.com/americabuys/mcp
+          probe GET https://nathanbellow.com/.well-known/oauth-authorization-server/americabuys/mcp/oauth
+          probe GET https://nathanbellow.com/.well-known/oauth-protected-resource/americabuys/mcp
+          probe GET https://nathanbellow.com/americabuys/mcp/oauth
+          probe POST https://nathanbellow.com/americabuys/mcp -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0","id":1,"method":"ping"}'
+          echo; echo "##### ORIGIN (bypassing natebell)"
+          probe GET http://136.64.62.196/.well-known/oauth-authorization-server/mcp/oauth -H 'Host: 136.64.62.196' -H 'X-Forwarded-Host: nathanbellow.com' -H 'X-Forwarded-Proto: https'
+          probe GET http://136.64.62.196/mcp -H 'Host: 136.64.62.196' -H 'X-Forwarded-Host: nathanbellow.com' -H 'X-Forwarded-Proto: https'
