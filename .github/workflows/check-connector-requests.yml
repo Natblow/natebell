@@ -1,0 +1,20 @@
+# Temporary diagnostic (branch only): reproduce what an MCP connector sends to America Buys.
+name: check-connector-requests
+on:
+  push:
+    branches: [claude/check-connector-requests]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe
+        run: |
+          probe() { echo; echo "===== $1 $2"; curl -sS -m 20 -D - -o body.txt -X "$1" "${@:3}" "$2" | grep -iE '^(HTTP/|www-authenticate|mcp-protocol-version)' ; echo "--- body:"; head -c 300 body.txt; echo; }
+          J='Content-Type: application/json'
+          A='Accept: application/json, text/event-stream'
+          INIT='{"jsonrpc":"2.0","id":0,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"probe","version":"1"}}}'
+          echo "### initialize, no header"; probe POST https://nathanbellow.com/americabuys/mcp -H "$J" -H "$A" --data "$INIT"
+          echo "### initialize, header 2025-11-25"; probe POST https://nathanbellow.com/americabuys/mcp -H "$J" -H "$A" -H 'MCP-Protocol-Version: 2025-11-25' --data "$INIT"
+          echo "### initialize, header 2025-06-18"; probe POST https://nathanbellow.com/americabuys/mcp -H "$J" -H "$A" -H 'MCP-Protocol-Version: 2025-06-18' --data "$INIT"
+          echo "### initialize, Origin claude.ai"; probe POST https://nathanbellow.com/americabuys/mcp -H "$J" -H "$A" -H 'Origin: https://claude.ai' --data "$INIT"
+          echo "### register, client_secret_basic"; probe POST https://nathanbellow.com/americabuys/mcp/oauth/register -H "$J" --data '{"client_name":"probe","redirect_uris":["https://claude.ai/api/mcp/auth_callback"],"token_endpoint_auth_method":"client_secret_basic"}'
